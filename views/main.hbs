@@ -1,0 +1,22 @@
+<ul>
+    {{#if listExists}}
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">LOC</th>
+                <th scope="col">LASTMOD</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each suggestedChamps}}
+            <tr>
+                <td>
+                <a target="_blank" rel="noopener noreferrer" href="http://localhost:4000/product/{{splitQuote this.loc}}"">{{this.loc}}</a>
+
+                </td>
+                <td>{{this.lastmod}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{/if}}</ul>
